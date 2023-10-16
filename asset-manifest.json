@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/savan2508/rupnet-cloth-shopping/static/css/main.c1520268.css",
+    "main.js": "/savan2508/rupnet-cloth-shopping/static/js/main.8e2c22b7.js",
+    "static/js/787.2a1b4e44.chunk.js": "/savan2508/rupnet-cloth-shopping/static/js/787.2a1b4e44.chunk.js",
+    "index.html": "/savan2508/rupnet-cloth-shopping/index.html",
+    "static/media/crown.svg": "/savan2508/rupnet-cloth-shopping/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
+    "main.c1520268.css.map": "/savan2508/rupnet-cloth-shopping/static/css/main.c1520268.css.map",
+    "main.8e2c22b7.js.map": "/savan2508/rupnet-cloth-shopping/static/js/main.8e2c22b7.js.map",
+    "787.2a1b4e44.chunk.js.map": "/savan2508/rupnet-cloth-shopping/static/js/787.2a1b4e44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1520268.css",
+    "static/js/main.8e2c22b7.js"
+  ]
+}
