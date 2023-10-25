@@ -4,9 +4,13 @@ import CrownLogo from "../../assets/logo/crown.svg";
 import { UserContext } from "../../contexts/UserContext";
 import "./navigation.styles.scss";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { CartIcon } from "../../components/cart-icon/CartIcon";
+import { CartDropdown } from "../../components/cart-dropdown/CartDropdown";
+import { CartContext } from "../../contexts/CartContext";
 
 export const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
 
   return (
     <Fragment>
@@ -27,7 +31,9 @@ export const Navigation = () => {
               Sign In
             </Link>
           )}
+          <CartIcon />
         </div>
+        {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </Fragment>
