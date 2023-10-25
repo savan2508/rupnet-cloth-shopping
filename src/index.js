@@ -6,13 +6,16 @@ import "./index.scss";
 import App from "./App";
 import { UserProvider } from "./contexts/UserContext";
 import reportWebVitals from "./reportWebVitals";
+import { ProductsProvider } from "./contexts/ProductsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <UserProvider>
-        <App />
+        <ProductsProvider>
+          <App />
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>,

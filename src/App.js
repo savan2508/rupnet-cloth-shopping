@@ -4,10 +4,7 @@ import "./components/catergory-items/CategoryItem";
 import { Home } from "./routes/home/Home";
 import { Navigation } from "./routes/navigation/Navigation";
 import { Authentication } from "./routes/authentication/Authentication";
-
-const Shop = () => {
-  return <h1>This is shopping</h1>;
-};
+import { Shop } from "./routes/shop/Shop";
 
 const App = () => {
   return (
