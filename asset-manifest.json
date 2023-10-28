@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/rupnet-cloth-shopping/static/css/main.11e7ad79.css",
-    "main.js": "/rupnet-cloth-shopping/static/js/main.ff44cee0.js",
+    "main.css": "/rupnet-cloth-shopping/static/css/main.41c4081a.css",
+    "main.js": "/rupnet-cloth-shopping/static/js/main.b82f4beb.js",
     "static/js/787.2a1b4e44.chunk.js": "/rupnet-cloth-shopping/static/js/787.2a1b4e44.chunk.js",
     "static/media/shopping-bag.svg": "/rupnet-cloth-shopping/static/media/shopping-bag.a688874f6f1507316bdfa420328a4a53.svg",
     "static/media/crown.svg": "/rupnet-cloth-shopping/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
     "index.html": "/rupnet-cloth-shopping/index.html",
-    "main.11e7ad79.css.map": "/rupnet-cloth-shopping/static/css/main.11e7ad79.css.map",
-    "main.ff44cee0.js.map": "/rupnet-cloth-shopping/static/js/main.ff44cee0.js.map",
+    "main.41c4081a.css.map": "/rupnet-cloth-shopping/static/css/main.41c4081a.css.map",
+    "main.b82f4beb.js.map": "/rupnet-cloth-shopping/static/js/main.b82f4beb.js.map",
     "787.2a1b4e44.chunk.js.map": "/rupnet-cloth-shopping/static/js/787.2a1b4e44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.11e7ad79.css",
-    "static/js/main.ff44cee0.js"
+    "static/css/main.41c4081a.css",
+    "static/js/main.b82f4beb.js"
   ]
 }
