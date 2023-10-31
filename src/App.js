@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./categories.styles.scss";
-import "./components/catergory-items/CategoryItem";
+import "./components/directory-items/DirectoryItem";
 import { Home } from "./routes/home/Home";
 import { Navigation } from "./routes/navigation/Navigation";
 import { Authentication } from "./routes/authentication/Authentication";
@@ -12,7 +12,7 @@ const App = () => {
     <Routes>
       <Route path={"/"} element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path={"shop"} element={<Shop />} />
+        <Route path={"shop/*"} element={<Shop />} />
         <Route path={"authentication"} element={<Authentication />} />
         <Route path={"checkout"} element={<Checkout />} />
       </Route>

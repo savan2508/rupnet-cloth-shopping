@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 
 const addCartItem = (cartItems, productToAdd) => {
-  // find if cartItems contains product
+  // find if cartItems contains categoriesMap
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id,
   );
