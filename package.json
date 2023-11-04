@@ -1,7 +1,6 @@
 {
   "name": "rupnet-clothing",
   "version": "0.1.0",
-  "homepage": "https://savan2508.github.io/rupnet-cloth-shopping/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
