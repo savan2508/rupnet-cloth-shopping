@@ -1,6 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import "./categories.styles.scss";
-import "./components/directory-items/DirectoryItem";
 import { Home } from "./routes/home/Home";
 import { Navigation } from "./routes/navigation/Navigation";
 import { Authentication } from "./routes/authentication/Authentication";
@@ -11,9 +9,11 @@ import {
   createUserDocumentFromAuth,
   onAuthStateChangedListener,
 } from "./utils/firebase/firebase.utils";
-import { UserContext } from "./contexts/UserContext";
 import { setCurrentUser } from "./store/user/user.action";
 import { useDispatch } from "react-redux";
+
+import "./categories.styles.scss";
+import "./components/directory-items/DirectoryItem";
 
 const App = () => {
   const dispatch = useDispatch();
