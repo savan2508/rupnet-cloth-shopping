@@ -1,13 +1,19 @@
 import {
-  applyMiddleware,
   compose,
+  applyMiddleware,
   legacy_createStore as createStore,
 } from "redux";
-import logger from "redux-logger";
+import { createLogger } from "redux-logger";
+
 import { rootReducer } from "./root-reducer";
+import { thunk } from "redux-thunk";
 
-const middleWares = [logger];
+const logger = createLogger({
+  predicate: (getState, action) => action && action.type,
+});
 
-const composeEnhancers = compose(applyMiddleware(...middleWares));
+const middleWares = [thunk, logger];
 
-export const store = createStore(rootReducer, composeEnhancers);
+const composedEnhancers = compose(applyMiddleware(...middleWares));
+
+export const store = createStore(rootReducer, undefined, composedEnhancers);
