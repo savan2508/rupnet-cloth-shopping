@@ -4,28 +4,28 @@
   "homepage": "https://savan2508.github.io/rupnet-cloth-shopping/",
   "private": false,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "firebase": "^10.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "firebase": "^10.12.4",
+    "globals": "^15.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2",
     "react-scripts": "^5.0.1",
-    "sass": "^1.69.5",
-    "styled-components": "^6.1.0",
-    "web-vitals": "^2.1.4"
+    "redux": "^5.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^3.1.0",
+    "reselect": "^5.1.1",
+    "sass": "^1.77.8",
+    "styled-components": "^6.1.12",
+    "web-vitals": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -42,7 +42,11 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@svgr/webpack": "^8.1.0",
-    "react-router-dom": "^6.16.0",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.35.0",
+    "prettier": "^3.3.3",
+    "react-router-dom": "^6.25.1",
     "react-scripts": "^5.0.1"
   }
 }
