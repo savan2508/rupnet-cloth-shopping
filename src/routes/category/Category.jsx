@@ -5,14 +5,14 @@ import { ProductCard } from "../../components/product-card/ProductCard";
 import { useSelector } from "react-redux";
 import {
   selectCategoriesMap,
-  selectIsCategoriesLoading,
+  selectIsLoading,
 } from "../../store/categories/category.select";
 import { Spinner } from "../../components/spinner/Spinner";
 
 export const Category = () => {
   const { category } = useParams();
   const categoriesMap = useSelector(selectCategoriesMap);
-  const isLoading = useSelector(selectIsCategoriesLoading);
+  const isLoading = useSelector(selectIsLoading);
 
   const [products, setProducts] = useState(categoriesMap[category]);
 

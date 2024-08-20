@@ -1,11 +1,9 @@
 import { useState } from "react";
-import {
-  createAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
-} from "../../utils/firebase/firebase.utils";
 import { FormInput } from "../form-input/FormInput";
 import "./sign-up-form.styles.scss";
 import { Button } from "../button/Button";
+import { useDispatch } from "react-redux";
+import { signUpStart } from "../../store/user/user.action";
 
 const defaultFormFields = {
   displayName: "",
@@ -17,6 +15,7 @@ const defaultFormFields = {
 export const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
+  const dispatch = useDispatch();
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -28,11 +27,7 @@ export const SignUpForm = () => {
       alert("Passwords do not match");
     }
     try {
-      const { user } = await createAuthUserWithEmailAndPassword(
-        email,
-        password,
-      );
-      await createUserDocumentFromAuth(user, { displayName });
+      dispatch(signUpStart(email, password, displayName));
       resetFormFields();
       console.log("User created successfully");
     } catch (error) {
