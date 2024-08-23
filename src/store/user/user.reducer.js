@@ -1,4 +1,5 @@
 import { USER_ACTION_TYPES } from "./user.types";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const USER_INITIAL_STATE = {
   currentUser: null,
@@ -6,7 +7,36 @@ export const USER_INITIAL_STATE = {
   error: null,
 };
 
-export const userReducer = (state = USER_INITIAL_STATE, action = {}) => {
+export const userReducer = createSlice({
+  name: "user",
+  initialState: USER_INITIAL_STATE,
+  reducers: {
+    signInSuccess: (state, action) => {
+      state.currentUser = action.payload;
+      state.isLoading = false;
+      state.error = null;
+    },
+    signOutSuccess: (state) => {
+      state.currentUser = null;
+      state.isLoading = false;
+      state.error = null;
+    },
+    signInFailed: (state, action) => {
+      state.error = action.payload;
+      state.isLoading = false;
+    },
+    signUpFailed: (state, action) => {
+      state.error = action.payload;
+      state.isLoading = false;
+    },
+    signOutFailed: (state, action) => {
+      state.error = action.payload;
+      state.isLoading = false;
+    },
+  },
+});
+
+export const userReducerOld = (state = USER_INITIAL_STATE, action = {}) => {
   const { type, payload } = action;
 
   switch (type) {
