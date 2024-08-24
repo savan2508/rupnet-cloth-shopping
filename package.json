@@ -7,6 +7,10 @@
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.0",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
     "firebase": "^10.12.4",
     "globals": "^15.8.0",
     "react": "^18.3.1",
@@ -21,6 +25,7 @@
     "reselect": "^5.1.1",
     "sass": "^1.77.8",
     "styled-components": "^6.1.12",
+    "typescript": "^5.5.4",
     "web-vitals": "^4.2.2"
   },
   "scripts": {

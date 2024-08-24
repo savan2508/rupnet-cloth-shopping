@@ -8,13 +8,13 @@ import {
   signOutFailed,
 } from "./user.action";
 import {
+  createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
   getCurrentUser,
   signInAuthUserWithEmailAndPassword,
   signInWithGooglePopup,
   signOutUser,
 } from "../../utils/firebase/firebase.utils";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export function* getSnapShotFromUserAuth(userAuth, additionalData) {
   try {
@@ -68,7 +68,7 @@ export function* isUserAuthenticated() {
 export function* signUp({ payload: { email, password, displayName } }) {
   try {
     const { user } = yield call(
-      createUserWithEmailAndPassword,
+      createAuthUserWithEmailAndPassword,
       email,
       password,
     );

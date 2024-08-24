@@ -5,11 +5,20 @@ import {
 } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+// @ts-ignore
 import logger from "redux-logger";
 
 import { rootReducer } from "./root-reducer";
 import createSageMiddleware from "redux-saga";
 import { rootSaga } from "./root-saga";
+
+export type RootState = ReturnType<typeof rootReducer>;
+
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: any;
+  }
+}
 
 const persistConfig = {
   key: "root",
