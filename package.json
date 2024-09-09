@@ -11,6 +11,7 @@
     "@types/node": "^22.5.0",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
+    "@types/redux-logger": "^3.0.13",
     "firebase": "^10.12.4",
     "globals": "^15.8.0",
     "react": "^18.3.1",
@@ -25,6 +26,7 @@
     "reselect": "^5.1.1",
     "sass": "^1.77.8",
     "styled-components": "^6.1.12",
+    "typed-redux-saga": "^1.5.0",
     "typescript": "^5.5.4",
     "web-vitals": "^4.2.2"
   },
@@ -51,6 +53,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@svgr/webpack": "^8.1.0",
+    "babel-plugin-macros": "^3.1.0",
     "eslint": "^9.7.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.35.0",

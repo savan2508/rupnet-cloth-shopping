@@ -7,9 +7,9 @@ import {
 import { AnyAction } from "redux-saga";
 
 export type CategoriesState = {
-  readonly categories: Category[];
+  readonly categories: Category[] | undefined;
   readonly isLoading: boolean;
-  readonly error: Error | null;
+  readonly error: Error | undefined | null;
 };
 
 export const CATEGORIES_INITIAL_STATE: CategoriesState = {
