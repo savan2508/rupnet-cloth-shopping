@@ -7,7 +7,6 @@ import { Checkout } from "./routes/checkout/Checkout";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import "./categories.styles.scss";
 import "./components/directory-items/DirectoryItem";
 import { checkUserSession } from "./store/user/user.action";
 
