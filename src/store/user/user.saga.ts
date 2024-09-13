@@ -50,9 +50,12 @@ export function* signInWithGoogle() {
   }
 }
 
-export function* signInWithEmail({
-  payload: { email, password },
-}: EmailSignInStart) {
+export function* signInWithEmail({ payload }: EmailSignInStart) {
+  if (!payload) {
+    throw new Error("Payload is undefined");
+  }
+
+  const { email, password } = payload;
   try {
     const userCredential = yield* call(
       signInAuthUserWithEmailAndPassword,
@@ -82,9 +85,11 @@ export function* isUserAuthenticated() {
   }
 }
 
-export function* signUp({
-  payload: { email, password, displayName },
-}: SignUpStart) {
+export function* signUp({ payload }: SignUpStart) {
+  if (!payload) {
+    throw new Error("Email or password is undefined");
+  }
+  const { email, password, displayName } = payload;
   try {
     const userCredential = yield* call(
       createAuthUserWithEmailAndPassword,
@@ -100,9 +105,11 @@ export function* signUp({
   }
 }
 
-export function* signInAfterSignup({
-  payload: { user, additionalDetails },
-}: SignUpSuccess) {
+export function* signInAfterSignup({ payload }: SignUpSuccess) {
+  if (!payload) {
+    throw new Error("Payload is undefined");
+  }
+  const { user, additionalDetails } = payload;
   yield* call(getSnapShotFromUserAuth, user, additionalDetails);
 }
 

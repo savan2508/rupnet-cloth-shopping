@@ -19,7 +19,7 @@ export type GoogleSignInStart = Action<USER_ACTION_TYPES.GOOGLE_SIGN_IN_START>;
 
 export type EmailSignInStart = ActionWithPayload<
   USER_ACTION_TYPES.EMAIL_SIGN_IN_START,
-  { email: string; Password: string }
+  { email: string; password: string }
 >;
 
 export type SignInSuccess = ActionWithPayload<
