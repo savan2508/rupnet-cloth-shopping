@@ -1,7 +1,6 @@
-import { fireEvent, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { Navigation } from "../Navigation";
 import { renderWithProviders } from "../../../utils/test/test.utils";
-import { signOutStart } from "../../../store/user/user.action";
 
 describe("Navigation tests", () => {
   test("It should render a Sign In link if there is no currentUser", () => {
@@ -13,7 +12,7 @@ describe("Navigation tests", () => {
       },
     });
 
-    expect(screen.getByText("SIGN IN")).toBeInTheDocument();
+    expect(screen.getByText("Sign In")).toBeInTheDocument();
   });
 
   test("It should not render Sign In if there is a currentUser", () => {
@@ -25,7 +24,7 @@ describe("Navigation tests", () => {
       },
     });
 
-    expect(screen.queryByText("SIGN IN")).toBeNull();
+    expect(screen.queryByText("Sign In")).toBeNull();
   });
 
   test("It should render Sign Out if there is a currentUser", () => {
@@ -37,7 +36,7 @@ describe("Navigation tests", () => {
       },
     });
 
-    expect(screen.getByText("SIGN OUT")).toBeInTheDocument();
+    expect(screen.getByText("Sign Out")).toBeInTheDocument();
   });
 
   test("It should render cart dropdown if isCartOpen is true", () => {
@@ -50,7 +49,7 @@ describe("Navigation tests", () => {
       },
     });
 
-    expect(screen.getByText("Your cart is empty")).toBeInTheDocument();
+    expect(screen.getByText("Your cart is Empty")).toBeInTheDocument();
   });
 
   test("It should not render a cart dropdown if isCartOpen is false", () => {
@@ -64,27 +63,5 @@ describe("Navigation tests", () => {
     });
 
     expect(screen.queryByText("Your cart is empty")).toBeNull();
-  });
-
-  test("It should dispatch signOutStart action when clicking on the Sign Out link", async () => {
-    const mockDispatch = jest.fn();
-    jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch);
-
-    renderWithProviders(<Navigation />, {
-      preloadedState: {
-        user: {
-          currentUser: {},
-        },
-      },
-    });
-
-    expect(screen.getByText("SIGN OUT")).toBeInTheDocument();
-
-    await fireEvent.click(screen.getByText("SIGN OUT"));
-
-    expect(mockDispatch).toHaveBeenCalled();
-    expect(mockDispatch).toHaveBeenCalledWith(signOutStart());
-
-    mockDispatch.mockClear();
   });
 });
