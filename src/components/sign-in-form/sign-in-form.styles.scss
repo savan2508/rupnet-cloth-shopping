@@ -1,7 +1,23 @@
-.sign-up-container {
+.sign-in-container {
   display: flex;
   flex-direction: column;
   width: 380px;
+
+  @media screen and (max-width: 800px) {
+    align-items: center;
+    margin-bottom: 50px;
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
 }
 
 h2 {

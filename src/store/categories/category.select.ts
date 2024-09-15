@@ -3,7 +3,6 @@ import { CategoriesState } from "./category.reducer";
 import { CategoryMap } from "./category.types";
 import { RootState } from "../store";
 
-// @ts-ignore
 const selectCategoryReducer = (state: RootState): CategoriesState => {
   return state.categories;
 };
